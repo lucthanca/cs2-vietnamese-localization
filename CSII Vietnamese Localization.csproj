@@ -1,0 +1,107 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+
+    <LangVersion>9.0</LangVersion>
+    <!--The folder where Game.dll is located. Set it only if the game is not installed in the default location, otherwise keep it empty-->
+    <CustomManagedPath>D:\Games\Cities Skylines II\Cities2_Data\Managed</CustomManagedPath>
+    <!--Path to the text file where PDX account data is stored which is required to publish the mod-->
+    <!--Keep it outside of project in order to not commit it or share accidentally-->
+    <!--The file should contain 2 lines:-->
+    <!--Your.PDX@Account.login-->
+    <!--Your-PDX-Account-Pa$$word-->
+    <!--<PDXAccountDataPath>$(USERPROFILE)\Desktop\pdx_account.txt</PDXAccountDataPath>-->
+    <PDXAccountDataPath>Properties\pdx_account.txt</PDXAccountDataPath>
+    <!--The file where mod information which is required for publishing mod on PDX mods are stored-->
+    <PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
+  </PropertyGroup>
+  <!--Imports must be after PropertyGroup block-->
+  <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.props" />
+  <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.targets" />
+
+  <ItemGroup>
+    <Reference Include="Colossal.UI">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Colossal.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.UI.Binding">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Colossal.UI.Binding.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.AssetPipeline">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Colossal.AssetPipeline.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.Localization">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Colossal.Localization.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Game">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Game.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.Core">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Colossal.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.Logging">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Colossal.Logging.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Colossal.IO.AssetDatabase">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Colossal.IO.AssetDatabase.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Unity.Burst.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Unity.Collections.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Entities">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Unity.Entities.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>D:\Games\Cities Skylines II\Cities2_Data\Managed\Unity.Mathematics.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Update="System">
+      <Private>false</Private>
+    </Reference>
+    <Reference Update="System.Core">
+      <Private>false</Private>
+    </Reference>
+    <Reference Update="System.Data">
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ModPropsFile)" Link="Properties\Mod.props" />
+    <None Include="$(ModTargetsFile)" Link="Properties\Mod.targets" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="localization\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="localization\vi-VN.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="lang\**">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+  </ItemGroup>
+</Project>

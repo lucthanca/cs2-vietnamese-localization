@@ -1,0 +1,37 @@
+<Publish>
+	<!--Id must be set in order to update existed mod. it is not required for publishing mod for the first time-->
+	<ModId Value="00000" />
+	<!--Name of the mod to display to players-->
+	<DisplayName Value="Vietnamese localization / Tiếng Việt" />
+	<!--Short description of the mod-->
+	<ShortDescription Value="lucthanca/vietnamese" />
+	<!--Long description of the mod. Single line or multi line. Supports minimal markdown subset-->
+	<!--LongDescription Value="Ukrainian localization for Cities: Skylines II" /-->
+  <LongDescription>
+    Tiếng Việt cho Cities: Skylines II
+  </LongDescription>
+	<!--Thumbnail-->
+	<Thumbnail Value="Properties/Thumbnail.png" />
+	<!--Screenshot, can be set multiple times-->
+	<!-- <Screenshot Value="Properties/Previews/1.jpg" />-->
+	<!--Tag, can be set multiple times-->
+	<Tag Value="Vietnamese" />
+	<!--Link to the forum post where the mod can be discussed-->
+	<ForumLink Value="" />
+	<!--Version of the mod-->
+	<ModVersion Value="1.0.0" />
+	<!--Recommended version of the base game to use the mod-->
+	<GameVersion Value="1.2.*" />
+	<!--Dependency for the mod, can be set multiple times-->
+  <Dependency Id="75426" DisplayName="I18n EveryWhere" />
+	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
+
+  <ChangeLog>
+  	# Port từ bản 1.1.11f1 của bác Hoàng Trung Sơn
+  </ChangeLog>
+	<!--ChangeLog>
+	</ChangeLog-->
+	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon-->
+	<ExternalLink Type="facebook" Url="https://www.facebook.com/lucthanca.me/" />
+  <ExternalLink Type="momo" Url="https://me.momo.vn/unghominhcocts" />
+</Publish>

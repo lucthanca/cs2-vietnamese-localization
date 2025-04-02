@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSII Vietnamese Localization", "CSII Vietnamese Localization.csproj", "{3749FD8C-CA55-4C34-8ECC-28FEC201003F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3749FD8C-CA55-4C34-8ECC-28FEC201003F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3749FD8C-CA55-4C34-8ECC-28FEC201003F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3749FD8C-CA55-4C34-8ECC-28FEC201003F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3749FD8C-CA55-4C34-8ECC-28FEC201003F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

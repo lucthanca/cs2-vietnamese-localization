@@ -1,0 +1,56 @@
+# Ignore Visual Studio specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build output
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.idb
+*.cache
+*.log
+*.scc
+*.vspscc
+*.vspx
+
+# Ignore package-related files
+packages/
+*.nupkg
+project.lock.json
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Ignore Rider-specific files
+.idea/
+*.sln.iml
+
+# Ignore Cities: Skylines 2 mod cache
+CS2ModCache/
+*.cs2mod
+*.cs2log
+
+# Ignore generated files
+GeneratedFiles/
+
+# Ignore Unity-related files (if applicable)
+Library/
+Temp/
+Obj/
+Logs/
+UserSettings/
+*.csproj.user
+
+# Ignore environment-specific files
+.env
+Properties/pdx_account.txt
