@@ -5,7 +5,7 @@
 Làm theo các bước sau để cài đặt module vào Cities: Skylines II:
 
 ### 1. Tải xuống
-- Truy cập [Releases](https://github.com/cs2-vietnamese-localization/releases) của repository này.
+- Truy cập [Releases](https://github.com/lucthanca/cs2-vietnamese-localization/releases) của repository này.
 - Tải file `.zip` mới nhất.
 
 ### 2. Giải nén
